@@ -1,0 +1,21 @@
+.foto {
+  position: fixed;
+  z-index: 1;
+  font-family: "ITALIANO_REGULAR";
+  padding-top: 10vh;
+  text-align: left;
+  color: #ebebeb;
+  margin: 20px 100px;
+  letter-spacing: 3px;
+  background-color: transparent;
+  /* color: #e31414; */
+  font-size: 2rem;
+}
+@media (min-width: 1024px) {
+  .foto {
+    text-align: left;
+    padding-left: 100px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}

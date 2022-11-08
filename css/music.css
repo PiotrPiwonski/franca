@@ -1,0 +1,66 @@
+.music {
+  position: absolute;
+  top: 20%;
+  left: 37.5%;
+  z-index: 2;
+  width: 25%;
+  height: 25%;
+  padding: 0;
+  background-color: transparent;
+  text-align: center;
+  /* font-family: "Indie Flower", cursive; */
+  /* font-family: "Rock Salt", cursive; */
+  font-family: "VETERAN TYPEWRITER";
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #ebebeb;
+  /* min-height: 200vh; */
+}
+@media (min-width: 1024px) {
+  .music {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+}
+
+.music__title {
+  font-size: 2rem;
+  padding-bottom: 50px;
+  transform: rotate(15deg);
+}
+@media (min-width: 1024px) {
+  .music__title {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+}
+.music__ul {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  list-style-type: none;
+}
+.music__li {
+  display: block;
+  position: relative;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.music__link {
+  display: block;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ebebeb;
+  opacity: 0.5;
+  padding-bottom: 15px;
+  transform: rotate(-10deg);
+  transition: 0.3s;
+}
+.music__link:hover {
+  color: #f00;
+  transform: rotate(0);
+}

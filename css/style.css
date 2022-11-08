@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  /* display: block; */
+  vertical-align: baseline;
+  /* cursor: crosshair; */
+}
+
+.root {
+  position: fixed;
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "GANG BANG CRIME";
+  src: URL("./GANG_BANG_CRIME.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ITALIANO_REGULAR";
+  src: URL("./Italianno-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VETERAN TYPEWRITER";
+  src: URL("./veteran_typewriter.ttf") format("truetype");
+}
+body {
+  background-color: transparent;
+}
+
+.burger {
+  position: fixed;
+  top: 0.6rem;
+  left: 0.6rem;
+  /* background-color: grey; */
+  width: 3rem;
+  height: 1.5rem;
+  transition: 0.2s;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.burger.show {
+  transform: rotate(90deg);
+}
+
+.burger span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #f00;
+  left: 0;
+  transition: top 0.3s 0.3s, bottom 0.3s 0.3s, opacity 0.3s 0.3s,
+    transform 0.3s 0.3s;
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger.show span:nth-child(1) {
+  top: calc(50% - 1.5px);
+  transform: rotate(45deg);
+}
+
+.burger span:nth-child(2) {
+  top: calc(50% - 1.5px);
+}
+
+.burger.show span:nth-child(2) {
+  top: calc(50% - 1.5px);
+  opacity: 0;
+}
+
+.burger span:nth-child(3) {
+  bottom: 0;
+}
+
+.burger.show span:nth-child(3) {
+  top: calc(50% - 3px);
+  transform: rotate(-45deg);
+}
+
+.menu {
+  font-family: "GANG BANG CRIME";
+  overflow: hidden;
+  z-index: 3;
+  position: fixed;
+  top: -100px;
+  height: 10vh;
+  left: 50px;
+  width: 85%;
+  background-color: transparent;
+  transition: 0.3s linear;
+}
+.menu.show {
+  top: 0;
+}
+@media (min-width: 1024px) {
+  .menu {
+    top: 100px;
+    height: 35vh;
+    left: -200px;
+    width: 120px;
+  }
+  .menu.show {
+    left: 20px;
+    top: 100px;
+  }
+}
+
+nav {
+  background-color: transparent;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+@media (min-width: 1024px) {
+  ul {
+    flex-direction: column;
+  }
+}
+li {
+  flex-grow: 1;
+}
+.fa-home {
+  font-size: 20px;
+}
+.link {
+  display: block;
+  font-family: "GANG BANG CRIME";
+  font-size: 15px;
+  padding: 10px 5px;
+  text-align: center;
+  color: #f00;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  .fa-home {
+    font-size: 25px;
+  }
+  .link {
+    text-align: left;
+    transform: rotate(10deg);
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+.link:hover {
+  color: #ebebeb;
+}
+.active {
+  color: #ebebeb;
+}
+
+.bio-on {
+  position: fixed;
+  top: 10vh;
+  left: 30vw;
+  z-index: 3;
+  text-decoration: none;
+  font-family: "VETERAN TYPEWRITER";
+  text-align: left;
+  cursor: pointer;
+  padding: 0 0;
+  color: #ebebeb;
+  letter-spacing: 3px;
+  background-color: transparent;
+  font-size: 2rem;
+}
+.bio-on:hover {
+  color: #f00;
+}
+@media (min-width: 1024px) {
+  .bio-on {
+    left: 40vw;
+    font-size: 3rem;
+  }
+}
+
+.bio-off {
+  opacity: 0.5;
+  z-index: 5;
+  text-align: center;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10%;
+  right: 10%;
+  width: 80px;
+  height: 80px;
+  color: #f00;
+  font-size: 80px;
+  cursor: pointer;
+}
+.bio-off:hover {
+  opacity: 0.6;
+}
+
+@keyframes obracanie {
+  0% {
+  }
+  30% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.facebook {
+  opacity: 0.5;
+  z-index: 5;
+  text-align: center;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10%;
+  right: 60%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.fa-facebook-square {
+  text-align: center;
+  display: block;
+  color: #ebebeb;
+  font-size: 2rem;
+  min-width: 100%;
+  min-height: 100%;
+}
+.fa-facebook-square:hover {
+  color: #f00;
+}
+@media (min-width: 1024px) {
+  .facebook {
+    right: 70%;
+  }
+  .fa-facebook-square {
+    font-size: 3rem;
+  }
+}
+
+.fanpage {
+  opacity: 0.5;
+  z-index: 5;
+  text-align: center;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10%;
+  right: 45%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.fa-facebook {
+  text-align: center;
+  display: block;
+  color: #ebebeb;
+  font-size: 2rem;
+  min-width: 100%;
+  min-height: 100%;
+}
+.fa-facebook:hover {
+  color: #f00;
+}
+@media (min-width: 1024px) {
+  .fanpage {
+    right: 55%;
+  }
+  .fa-facebook {
+    font-size: 3rem;
+  }
+}
+
+.youtube {
+  opacity: 0.5;
+  z-index: 5;
+  text-align: center;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10%;
+  right: 30%;
+  width: 80px;
+  height: 80px;
+  font-size: 80px;
+  cursor: pointer;
+}
+.fa-youtube {
+  text-align: center;
+  display: block;
+  color: #ebebeb;
+  font-size: 2rem;
+  min-width: 100%;
+  min-height: 100%;
+}
+.fa-youtube:hover {
+  color: #f00;
+}
+@media (min-width: 1024px) {
+  .youtube {
+    right: 40%;
+  }
+  .fa-youtube {
+    font-size: 3rem;
+  }
+}
+
+.mute {
+  opacity: 0.5;
+  z-index: 5;
+  text-align: center;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10%;
+  right: 15%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.fa-volume-off {
+  text-align: center;
+  display: block;
+  color: #f00;
+  font-size: 2rem;
+  min-width: 100%;
+  min-height: 100%;
+}
+.fa-volume-off:hover {
+  color: #f00;
+}
+@media (min-width: 1024px) {
+  .mute {
+    right: 25%;
+  }
+  .fa-volume-off {
+    font-size: 3rem;
+  }
+}
+
+.video {
+  position: fixed;
+  z-index: -3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+canvas {
+  position: fixed;
+  z-index: -3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 140%;
+  min-height: 100%;
+}
+/* .mute {
+  color: white;
+  cursor: pointer;
+  display: initial;
+} */
+
+footer {
+  color: #ebebeb;
+  opacity: 0.5;
+  font-size: 1.2rem;
+  z-index: 5;
+  text-align: center;
+  position: fixed;
+  text-decoration: none;
+  bottom: 3%;
+  right: 15%;
+  width: auto;
+  height: 30px;
+}

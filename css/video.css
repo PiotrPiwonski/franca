@@ -1,0 +1,128 @@
+.details h4 {
+  padding: 0;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.8px;
+  font-size: 0.7rem;
+  font-family: "VETERAN TYPEWRITER";
+  /* font-weight: 600; */
+  color: #ebebeb;
+  opacity: 0.8;
+}
+
+.details p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.3;
+  /* font-weight: 600; */
+  color: grey;
+  font-size: 1rem;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  position: fixed;
+  z-index: 2;
+  /* top: 5vh; */
+  padding-top: 5vh;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  background-color: black;
+}
+
+main {
+  flex-grow: 1;
+  z-index: 1;
+  /* kontener flex */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-direction: row;
+  padding: 40vh 18px 10px;
+}
+
+article {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 2px solid #f00;
+  opacity: 0.5;
+  border-radius: 8px;
+  margin: 10px auto;
+}
+
+.thumb {
+  height: 70px;
+  border-radius: 4px;
+}
+
+.details {
+  padding: 18px 22px;
+}
+
+@media (min-width: 530px) {
+  main {
+    padding: 55vh 18px 10px;
+  }
+}
+
+@media (min-width: 640px) {
+  main {
+    padding: 55vh 18px 10px;
+  }
+
+  article {
+    flex-basis: 48%;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 400px) {
+  main {
+    padding: 30vh 18px 10px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 700px) {
+  main {
+    padding: 45vh 18px 10px;
+  }
+
+  .thumb {
+    height: 90px;
+  }
+
+  .details h4 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1000px) {
+  main {
+    padding: 35vh 18px 10px;
+  }
+
+  .thumb {
+    height: 110px;
+  }
+
+  .details h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1000px) {
+  .thumb {
+    height: 90px;
+  }
+
+  .details h4 {
+    font-size: 1rem;
+  }
+}
